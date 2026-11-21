@@ -5,7 +5,7 @@
 // DISABLE_ECH | disable_ech  是否在订阅中关闭ECH, 设置为true时关闭，false开启，默认开启
 // ECH | ech  自定义ECH配置来源, 格式: 配置域名+DoH服务器, 默认使用 cloudflare-ech.com+https://dns.alidns.com/dns-query
 
-let connect = (await import(atob('Y2xvdWRmbGFyZTpzb2NrZXRz'))).connect;
+import { connect } from 'cloudflare:sockets';
 
 let password = '123456';  // 主页登录密码,建议修改或添加 PASSWORD环境变量
 let relayIP = 'ProxyIP.CMLiussss.net';  // pro-xyip，格式：ip、域名、ip:port、域名:port等,没填写port，默认使用443
